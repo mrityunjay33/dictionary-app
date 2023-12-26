@@ -24,17 +24,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
       <div className="search-bar">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Enter a word"
+          placeholder="Search for a word..."
         />
         <button onClick={handleSearch}>Search</button>
       </div>
+      <br />
       <div className="search-result">
+        <div><b>Definition</b>:</div>
         {searchResult && <p>{searchResult}</p>}
       </div>
     </div>
